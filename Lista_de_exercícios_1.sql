@@ -73,3 +73,10 @@ right join matriculas m on m.id  = a.id;
 select nome, curso
 from alunos a
 inner join matriculas m on m.id  = a.id;
+
+-- 16.
+select nome as nome_autor, count(livros.id) as quantidade_de_livros from autores
+left join livros on autores.id = livros.autor_id
+group by autores.id
+order by quantidade_de_livros desc
+limit 1;
