@@ -92,3 +92,8 @@ having sum(receita) = (
       from vendas 
       group by produto ) as receita_gerada_por_cada_produto
 );
+
+-- 19.
+select alunos.id as Aluno_ID,alunos.nome as Nome_Aluno,count(matriculas.id) as Numero_de_Matriculas from alunos
+left join  matriculas on alunos.id = matriculas.aluno_id
+group by alunos.id, alunos.nome;
