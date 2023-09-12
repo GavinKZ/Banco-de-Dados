@@ -63,3 +63,8 @@ select * from aluno_curso;
 -- 13.
 select nome, titulo from  autores a
 left join  livros l  on a.id = l.autor_id;
+
+-- 14.
+select nome, curso
+from alunos a
+right join matriculas m on m.id  = a.id;
