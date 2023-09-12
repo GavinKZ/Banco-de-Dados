@@ -13,4 +13,8 @@ where a.nome = "J.K. Rowling";
 -- 4.
 select aluno_id, nome from alunos a
 left join matriculas m on m.id = a.id
-where curso = "Engenharia de Software"
+where curso = "Engenharia de Software";
+
+-- 5.
+select produto, sum(receita) as receita_total from vendas
+group by produto;
