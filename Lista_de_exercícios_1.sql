@@ -58,3 +58,8 @@ join autores a on a.id = l.autor_id;
 create view aluno_curso as
 select nome, curso from alunos a
 right join matriculas m on m.id  = a.id;
+select * from aluno_curso;
+
+-- 13.
+select nome, titulo from  autores a
+left join  livros l  on a.id = l.autor_id;
