@@ -23,3 +23,8 @@ group by produto;
 select nome, count(autor_id) as livros_total from livros l
 join autores a on a.id = l.autor_id
 group by nome;
+
+-- 7.
+select curso, count(a.id) as alunos_qtd from alunos a
+join matriculas m on m.id = a.id
+group by curso;
