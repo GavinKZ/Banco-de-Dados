@@ -54,3 +54,7 @@ create view livros_e_autores as
 select titulo,nome from livros l 
 join autores a on a.id = l.autor_id;
 
+-- 12.
+create view aluno_curso as
+select nome, curso from alunos a
+right join matriculas m on m.id  = a.id;
