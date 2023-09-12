@@ -36,8 +36,15 @@ group by produto;
 
 -- 9.
 create view receita_total as 
-select produto, sum(receita) as receita_total from vendas
+select produto, sum(receita) as receita_t from vendas
 group by produto;
-
 select * from receita_total
 where receita_t >= "10000.00";
+
+-- 10.
+create view quantidade_de_livros as
+select nome, count(autor_id) as livros_autor_total from livros l 
+join autores a on a.id = l.autor_id
+group by nome;
+select *  from quantidade_de_livros
+where total_de_livros_autor >= 2;
